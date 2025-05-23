@@ -1,16 +1,16 @@
 {
-    "name": "Small Interval Alarm",
-    "short_name": "Alarm",
-    "start_url": ".",
-    "display": "standalone",
-    "background_color": "#ffffff",
-    "description": "A small interval alarm web app",
-    "icons": [
-      {
-        "src": "images/alaram.png",
-        "sizes": "192x192",
-        "type": "image/png"
-      },
-    ]
-  }
-  
+  "name": "Small Interval Alarm",
+  "short_name": "Alarm",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "description": "A small interval alarm web app",
+  "icons": [
+    {
+      "src": "images/alaram.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
+
