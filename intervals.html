@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0077cc" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>⏰ Smart Interval Alarm</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>⏰ Smart Interval Alarm</h1>
+
+    <label for="customMessage">Custom Interval Message:</label>
+    <input type="text" id="customMessage" placeholder="e.g. Time to stretch!" />
+
+    <label for="totalTime">Total Duration (minutes):</label>
+    <input type="number" id="totalTime" placeholder="e.g. 9" />
+
+    <label for="intervalTime">Interval (minutes):</label>
+    <input type="number" id="intervalTime" placeholder="e.g. 1" />
+
+    <p id="countdown"></p>
+
+    <div class="button-group">
+      <button id="startBtn">▶️ Start</button>
+      <button id="pauseBtn">⏸️ Pause</button>
+      <button id="stopBtn">⏹️ Stop</button>
+      <button id="resetBtn">🔄 Reset</button>
+    </div>
+
+    <h2 id="status">Status: Ready</h2>
+    <progress id="progressBar" max="100" value="0"></progress>
+    <audio id="beepSound" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" preload="auto"></audio>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
