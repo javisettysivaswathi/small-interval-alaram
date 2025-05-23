@@ -152,20 +152,14 @@ if (window.SpeechRecognition) {
     }
   };
 
-  recognition.onerror = (e) => {
-    console.error("Voice recognition error:", e);
-  };
+recognition.onerror = function(event) {
+  if (event.error === 'no-speech') {
+    console.log("No speech detected. Please try again.");
+  } else {
+    console.error("Voice recognition error:", event);
+  }
+};
 
-  recognition.onend = () => {
-    // Restart listening automatically
-    recognition.start();
-  };
-
-  recognition.start();
-  console.log("🎤 Voice recognition activated. Say: 'start', 'pause', 'stop', or 'reset'");
-} else {
-  alert("❌ Your browser does not support speech recognition.");
-}
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('sw.js').then(registration => {
