@@ -5,7 +5,7 @@ const FILES_TO_CACHE = [
   '/style.css',
   '/script.js',
   '/manifest.json',
-  'https://actions.google.com/sounds/v1/alarms/beep_short.ogg'
+  '/images/alaram.png'
 ];
 
 // Install event - caching files
