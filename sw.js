@@ -5,9 +5,8 @@ const FILES_TO_CACHE = [
   '/style.css',
   '/script.js',
   '/manifest.json',
-  '/images/alaram.png'
+  '/images/icon.png'
 ];
-
 // Install event - caching files
 self.addEventListener('install', (event) => {
   console.log('[ServiceWorker] Install');
@@ -49,3 +48,10 @@ self.addEventListener('fetch', (event) => {
       .catch(() => caches.match('/index.html')) // fallback if offline and no cache
   );
 });
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then(reg => console.log('Service Worker registered', reg))
+      .catch(err => console.error('SW registration failed', err));
+  });
+}
